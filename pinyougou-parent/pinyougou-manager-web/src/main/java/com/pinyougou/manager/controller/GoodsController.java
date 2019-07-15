@@ -124,6 +124,11 @@ public class GoodsController {
 				}else {
 					System.out.println("没有数据");
 				}
+				//****生成商品详细页
+				for(Long goodsId:ids){
+					itemPageService.genItemHtml(goodsId);
+				}
+
 			}
 			
 			return new Result(true, "成功");

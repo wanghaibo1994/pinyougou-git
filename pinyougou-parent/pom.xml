@@ -247,7 +247,15 @@
 	            <groupId>xml-apis</groupId>  
 	            <artifactId>xml-apis</artifactId>  
 	            <version>1.4.01</version>  
-	        </dependency> 		
+	        </dependency>
+
+			<dependency>
+				<groupId>org.javassist</groupId>
+				<artifactId>javassist</artifactId>
+				<version>3.18.0-GA</version>
+				<scope>compile</scope>
+			</dependency>
+
 		</dependencies>	
 	
 	</dependencyManagement>
@@ -291,5 +299,6 @@
 		<module>pinyougou-search-web</module>
 		<module>pinyougou-page-interface</module>
 		<module>pinyougou-page-service</module>
-	</modules>
+        <module>pinyougou-page-web</module>
+    </modules>
 </project>
