@@ -7,13 +7,11 @@
         http://www.springframework.org/schema/mvc http://www.springframework.org/schema/mvc/spring-mvc.xsd
         http://code.alibabatech.com/schema/dubbo http://code.alibabatech.com/schema/dubbo/dubbo.xsd
         http://www.springframework.org/schema/context http://www.springframework.org/schema/context/spring-context.xsd">
-
-    <context:component-scan base-package="com.pinyougou.page.service.impl"/>
+ 
+    <dubbo:protocol name="dubbo" port="20884"></dubbo:protocol>
+	<dubbo:application name="pinyougou-search-service"/>  
+    <dubbo:registry address="zookeeper://192.168.25.135:2181"/>
+    <dubbo:annotation package="com.pinyougou.search.service.impl" />  
    
-    <bean id="freemarkerConfig"
-		class="org.springframework.web.servlet.view.freemarker.FreeMarkerConfigurer">
-		<property name="templateLoaderPath" value="/WEB-INF/ftl/" />
-		<property name="defaultEncoding" value="UTF-8" />
-	</bean>
    
 </beans>

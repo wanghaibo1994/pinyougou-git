@@ -131,7 +131,7 @@ public class GoodsServiceImpl implements GoodsService {
 					title+=" "+map.get(key);
 				}
 				item.setTitle(title);
-				
+				item.setStatus("1");
 				setItemValues(item,goods);
 				
 				itemMapper.insert(item);
